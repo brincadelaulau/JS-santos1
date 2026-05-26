@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olá Mundo</title>
+</head>
+<body>
+
+  <h1 id="titulo">Olá Mundo</h1>
+
+  <p id="paragrafo">Meu parágrafo</p>
+
+  <button id="botao">Clique aqui</button>
+
+  <br><br>
+
+  <button id="darkMode">Dark Mode</button>
+  <button id="lightMode">Light Mode</button>
+
+  <hr>
+
+  <h2 id="novoTitulo">Título Original</h2>
+
+  <p id="novoParagrafo">
+    Esse é o texto original do parágrafo.
+  </p>
+
+  <button id="mudarTudo">Mudar Tudo</button>
+
+  <script>
+    const titulo = document.getElementById("titulo");
+
+    titulo.textContent = "Bem-vindo ao JavaScript";
+
+    const paragrafo = document.getElementById("paragrafo");
+
+    paragrafo.style.color = "blue";
+    paragrafo.style.fontSize = "30px";
+
+    const botao = document.getElementById("botao");
+
+    botao.addEventListener("click", function() {
+      alert("Você clicou no botão!");
+    });
+
+    const darkMode = document.getElementById("darkMode");
+    const lightMode = document.getElementById("lightMode");
+
+    darkMode.addEventListener("click", function() {
+      document.body.style.backgroundColor = "black";
+      document.body.style.color = "white";
+    });
+
+    lightMode.addEventListener("click", function() {
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+    });
+
+    const novoTitulo = document.getElementById("novoTitulo");
+    const novoParagrafo = document.getElementById("novoParagrafo");
+    const mudarTudo = document.getElementById("mudarTudo");
+
+    mudarTudo.addEventListener("click", function() {
+
+      novoTitulo.textContent = "Título Alterado";
+
+      novoParagrafo.textContent =
+        "O texto do parágrafo foi modificado com JavaScript.";
+
+      document.body.style.backgroundColor = "purple";
+
+      document.body.style.color = "yellow";
+    });
+  </script>
+
+</body>
+</html>
